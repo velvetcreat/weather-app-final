@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+		rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+		crossorigin="anonymous"
+		/>
+	<meta charset="UTF-8" />
+	<!--mobile compatible-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="src/styles.css"/>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title> CSS Practice </title>
+</head>
+<body>
+	<div class="container">
+	<div class="weather-app">
+				<form class="searchBar" id="search-city">
+					<input type="text" id="city-input" placeholder="Search for a city" />
+					<input type="submit" id="search-city" value="search" />
+					<div class="float-left">
+						</form>
+					<button class="currentButton"> my 📍</button>
+				</br>
+				<!--Current data of city,date,temp-->
+				<div class="col">
+				</div>
+				<div class="col">
+					<div class="row row-cols-1">
+						<h3 id="current-city"> Los Angeles </h3>
+					</div>
+					<img src="https://media3.giphy.com/media/h7Lgumb5lyfLk7mctB/giphy.gif?cid=ecf05e47lfdlu4tx0kfkg2xw2n9o081w70ro36hce6loo6bf&rid=giphy.gif&ct=s" 
+					width="150px"
+					alt="Clear" 
+					id="current-icon"
+					class="float-left"
+					/>
+					<!--Temperature Unit converter-->
+					<span class="tempUnits" id="current-temp">
+						80</span><span class="units">
+							<a href="#" id ="cel-link"class="active">°C </a> | <a href="#"id ="fahr-link" class="active">°F</a>
+						</span>
+								</div>
+								<span class="description">"It is currently sunny, don't forget your sunscreen!"
+								</span>
+							</div>
+						<br/>
+						<span id="last-updated" class="last-updated">Last Updated:</span><h4 id="current-date"> 
+							</h4>
+							</span>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<!--Weekend Forecast of columns with (future) horizontal scrollbar in card-->
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<div class="weather-forecast"id="forecast">
+					<div class="row">
+						<!--beginning of column-->
+							<div class="col-2">
+								<div class="forecast-date">
+								Sun.
+								<img src="#" alt="" width="54"
+								/>
+								<div class="forecast-temp">
+									<span class="forecast-temp-max">70°F </span>
+									<span class="forecast-temp-min">55°F</span>
+								</div>
+								</div>
+							</div>
+<!--end of column-->							
+						</div>
+					</div>
+						<!--5 day forecast in their groups-->
+								<!--<div class="card-body"->
+							<div class="card-group">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title" id="tomorrow-day">Sun.</h5>
+										<p class="card-text" id="tomorrow-emoji">☀️</p>
+										<p class="card-text" >
+											<strong id="tomorrow-hightemp">70°F </strong></p>
+											<p class="card-text" id="tomorrow-lowtemp">55°F</p>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title" id="two-day">Mon.</h5>
+											<p class="card-text" id="two-emoji">⛅</p>
+											<p class="card-text" id="two-hightemp"><strong>67°F</strong></p>
+											<p class="card-text" id="two-lowtemp">52°F</p>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title" id="three-day">Tue.</h5>
+											<p class="card-text id="three-emoji">☁️</p>
+											<p class="card-text" id="three-hightemp"><strong>65°F</strong></p>
+											<p class="card-text" id="three-lowtemp">55°F</p>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title" id="four-day">Wed.</h5>
+											<p class="card-text" id="four-emoji">🌧️</p>
+											<p class="card-text" id="four-hightemp"><strong>62°F</strong></p>
+											<p class="card-text" id="four-lowtemp">52°F</p>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title" id="five-day">Thurs.</h5>
+											<p class="card-text" id="five-emoji">🌥</p>
+											<p class="card-text" id="five-hightemp"><strong>73°F</strong></p>
+											<p class="card-text" id="five-lowtemp">56°F</p>
+										</div>
+									</div>-->
+									<!--End of forecast groups-->
+								</div>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<!--Moonphase & sunsets-->
+			<footer class="github"><a href="https://github.com/velvetcreat/HW7_Ccamacho" target="_blank" class="github-link" >Open source </a>by Atomvlny</span></footer>
+			<span class="moonphase"> 🌘 Moon Phase: Waning Crescent </span>
+		</br>
+		<div class="container"> 
+			<div class="row"> 
+				<div class="col-sm-6">
+					<span class="sunrise"><strong>Sunrise</strong>
+						<span="sunriseTime"> 6:06</span></span></div>
+						<div class="col-sm-6">
+							<span class="sunset"><strong>Sunset</strong>
+								<span="sunsetTime"> 19:30</span></span></div> 
+							</div> 
+							</div>
+						<!--Current weather details humidity etc.-->		
+						<br/>
+						<div class="container">
+							<div class="row align-items-start">
+								<div class="col-3" id="humidity">
+									Humidity: 49%
+								</div>
+								<div class="col-3" id="visibility">
+									Visibility: Good
+								</div>
+								<div class="col-3" id="wind">
+									Wind: 11km/h
+								</div>
+								<div class="col-3" id="precipitation">
+									Precipitation: 16%
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+				<script src="src/index.js">
+				</script>
+				</body>
+				</html>
+				
+				
+				
+				

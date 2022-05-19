@@ -1,0 +1,165 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  }
+  .weather-app {
+    border: 10px inset rgba(220, 240, 253, 0.3);
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  .searchBar {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+  }
+  
+  .weather-app .active {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .weather-app .active:hover {
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  .weather-app .units {
+    position: relative;
+    font-size: 20px;
+    top: -20px;
+  }
+  .currentButton {
+    background-color: #efefef;
+    border-color: #efefef;
+    color: black;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 5px 20px;
+    transition: all 200ms ease-in-out;
+  }
+  .currentButton:hover {
+    background-color: #e0e0e0;
+    color: #bfbfbf;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 5px 20px;
+    color: darkblue;
+  }
+  .currentButton:active {
+    background-color: #ffffff;
+  }
+  .current-emoji {
+    display: inline;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .city,
+  h3 {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: monospace;
+    display: inline;
+    margin: auto;
+    padding: 0px 0px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .tempUnits {
+    font-size: 50px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+  }
+  .current-date {
+    font-weight: 100;
+    text-decoration: none;
+    list-style: none;
+  }
+  .container {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .last-updated {
+    color: #969696;
+  }
+  .weather-forecast {
+    margin-top: 5px;
+    text-align: center;
+  }
+  .forecast-date {
+    font-size: 18px;
+    color: black;
+  }
+  .forecast-temp {
+    font-size: 13px;
+  }
+  .forecast-temp-min {
+    opacity: 0.5;
+  }
+  
+  .github {
+    display: block;
+    margin: auto;
+    font-size: 18px;
+  
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .github-link {
+    color: #949494;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .card {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(205, 234, 252);
+  }
+  h4 {
+    color: rgb(35, 97, 231);
+    font-size: 32px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .weekdays {
+    text-decoration: none;
+    list-style: none;
+  }
+  div.scrollmenu {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  h5 {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .moonphase {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .sunset {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  
