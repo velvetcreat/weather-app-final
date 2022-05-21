@@ -45,7 +45,6 @@ function displayForecast() {
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri"];
   days.forEach(function (day) {});
-
   forecastHTML =
     forecastHTML +
     `<div class="col-2">
@@ -53,8 +52,8 @@ function displayForecast() {
 ${days}
 <img src="#" alt="" width="54"/>
 <div class="forecast-temp">
-<span class="forecast-temp-max">70°F </span>
-<span class="forecast-temp-min">55°F</span>
+<span class="forecast-temp-max"> 70°F </span>
+<span class="forecast-temp-min"> 55°F </span>
 </div>
 </div>
 </div>`;
@@ -66,6 +65,7 @@ ${days}
 //               Search button activation from form
 let showCurrentCity = document.querySelector("#search-city");
 showCurrentCity.addEventListener("submit", showCity);
+
 //              connecting axios & Open Weather API &&
 //               New search updating HTML city
 function showCity(event) {
@@ -95,6 +95,18 @@ function showCurrentTemp(response) {
   let windSpeed = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind: ${windSpeed}km/h`;
+
+  let sunriseData = response.data.sys.sunrise;
+  let sunriseUnix = `${sunriseData}`;
+  let sunrise = new Date(sunriseUnix * 1000);
+  let sunriseElement = document.querySelector("#sunrise");
+  sunriseElement.innerHTML = `${sunrise}`;
+
+  let sunsetData = response.data.sys.sunset;
+  let sunsetUnix = `${sunsetData}`;
+  let sunset = new Date(sunsetUnix * 1000);
+  let sunsetElement = document.querySelector("#sunset");
+  sunsetElement.innerHTML = `${sunset}`;
 
   let iconElement = document.querySelector("#current-icon");
   iconElement.setAttribute("alt", response.data.weather[0].description);
@@ -174,6 +186,18 @@ function showAreaTemp(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind: ${windSpeed}km/h`;
 
+  let sunriseData = response.data.sys.sunrise;
+  let sunriseUnix = `${sunriseData}`;
+  let sunrise = new Date(sunriseUnix * 1000);
+  let sunriseElement = document.querySelector("#sunrise");
+  sunriseElement.innerHTML = `${sunrise}`;
+
+  let sunsetData = response.data.sys.sunset;
+  let sunsetUnix = `${sunsetData}`;
+  let sunset = new Date(sunsetUnix * 1000);
+  let sunsetElement = document.querySelector("#sunset");
+  sunsetElement.innerHTML = `${sunset}`;
+
   let iconElement = document.querySelector("#current-icon");
   iconElement.setAttribute("alt", response.data.weather[0].description);
   iconElement.setAttribute(
@@ -192,5 +216,4 @@ function showAreaTemp(response) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
-
 displayForecast();
