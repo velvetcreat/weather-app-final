@@ -186,7 +186,7 @@ body {
   .forecast-temp {
     font-size: 13px;
   }
-  .forecast-temp-min {
+  #forecast-temp-min {
     opacity: 0.5;
   }
   .background-moon {
