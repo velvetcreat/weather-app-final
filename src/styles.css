@@ -8,13 +8,12 @@ body {
     background-repeat: no-repeat;
     display: block;
     margin: auto;
-    margin-top: 10px;
     width: 100%;
   }
   .weather-app {
     border: 10px;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
     padding: 20px;
   }
@@ -31,7 +30,7 @@ body {
     border-radius: 5px;
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0px 0px;
     position: relative;
     top: -30px;
@@ -51,7 +50,7 @@ body {
     font-size: 20px;
     top: -30px;
   }
-  .currentButton {
+  #currentButton {
     background-color: #efefef;
     border-color: #efefef;
     color: black;
@@ -64,7 +63,7 @@ body {
     left: 280px;
     transition: all 200ms ease-in-out;
   }
-  .currentButton:hover {
+  #currentButton:hover {
     background-color: rgb(184, 210, 255);
     color: rgb(184, 210, 255);
     display: block;
@@ -73,7 +72,7 @@ body {
     padding: 5px 5px;
     color: darkblue;
   }
-  .currentButton:active {
+  #currentButton:active {
     background-color: #ffffff;
   }
   .city,
@@ -85,7 +84,7 @@ body {
     margin: auto;
     padding: 0px 0px;
     position: relative;
-    top: 20px;
+    top: 40px;
     text-align: center;
     text-transform: capitalize;
   }
@@ -98,7 +97,7 @@ body {
   }
   .temp-section {
     position: relative;
-    top: -40px;
+    top: 20px;
   }
   .tempUnits {
     display: inline;
@@ -108,7 +107,7 @@ body {
     list-style: none;
     text-decoration: none;
   }
-  .description {
+  #description {
     color: rgb(24, 24, 24);
     display: block;
     margin: auto;
@@ -172,6 +171,8 @@ body {
     color: #969696;
     position: relative;
     left: 50px;
+    margin: 0%;
+    padding: 0%;
   }
   /*5 day forecast */
   .weather-forecast {
@@ -227,6 +228,10 @@ body {
     margin: auto;
     padding: 0px;
     position: relative;
-    top: -450px;
+   top: -100px;
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
   }
   

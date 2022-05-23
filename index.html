@@ -25,7 +25,7 @@
 				<input type="image" id="search-city" alt="submit"
 				src="https://media1.giphy.com/media/YExlaQJ2LvC7H8aUmt/giphy.gif?cid=ecf05e478pw64znh5aggcmbd61hxc57j2fbf0vua9n39echc&rid=giphy.gif&ct=s"
 				width="45" height="45" /> 
-				<button class="currentButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+				<button id="currentButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
 					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
 				</svg></button>
 				<i class="fa-solid fa-location-dot"></i>
@@ -52,23 +52,19 @@
 							<a href="#" id ="cel-link"class="active">°C </a>|<a href="#"id ="fahr-link" class="active">°F</a>
 						</span>
 					</span>
-<span class="description">Current weather outlook: sunny
+<span id="description">Current weather outlook: sunny
 								</span>
 					<!--Weather details humidity etc-->
 					<div class="container">
-							<div class="row align-items-right" id="weather-details">
-								<div class="col-3" id="humidity">
+							<div class="row align-items-center" id="weather-details">
+								<div class="col-" id="humidity">
 									Humidity: 49%
-								</div>
-								<div class="col-3" id="visibility">
-									Visibility: Good
-								</div>
-								<div class="col-3" id="wind">
+                                </div>
+								<div class="col-" id="wind">
 									Wind: 11km/h
 								</div>
 								<!--end of weather details-->
-								
-							</div>
+								</div>
 						</div>	
 						<!--weather app container end-->
 							</div>
@@ -85,30 +81,31 @@
 		</div>
 		<!--Weekend Forecast of columns with (future) horizontal scrollbar in card-->
 		<div class="container">
-		<div class="card-group">
-			<div class="card">
-				<div class="card-body">
-					<div class="weather-forecast"id="forecast">
-					<div class="row">
-						<!--beginning of column-->
-							<div class="col-2">
-								<div class="forecast-date">
-								Sun.
-								<img src="#" alt="" width="54"
-								/>
-								<div class="forecast-temp">
-									<span class="forecast-temp-max">70°F </span>
-									<span class="forecast-temp-min">55°F</span>
-								</div>
-								</div>	
+			<div class="weather-forecast"id="forecast">
+						<div class="row row-cols-1 row-weather-forecast">
+						<div class="col-md">
+							<div class="card">
+							<div class="card-body">
+							<h5 class="card-day"></h5>
+								<p class="card-temperature" id="forecast-temp-max"></p>
+							<img
+							src=""
+							alt=""
+							width="54"
+							class="forecast-icon"
+							/>
+								<p class="card-temperature" id="forecast-temp-min"></p>
 							</div>
-						</div>				
+						</div>
+						</div>
+							</div>				
 							</div>
+							<!--End of forecast groups-->
 						</div>
 					</div>
 				</div>
 			</div>					
-	<!--End of forecast groups-->
+	
 								<br/>
 			<footer class="github"><a href="https://github.com/velvetcreat/HW7_Ccamacho" target="_blank" class="github-link" >Open source </a>by Atomvlny</span></footer>
 		
