@@ -115,36 +115,44 @@ function searchCity(city) {
       
       axios.get(apiUrl).then(displayForecast);
     }
-    // Display forecast
+    // Date structure for the week forecast
+    function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  day = date.getDay();
+  days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+  // Display forecast
     function displayForecast(response) {
       forecast = response.data.daily;
-    
+      
       let forecastElement = document.querySelector("#forecast");
-    
+      
       let forecastHTML = `<div class="row row-cols-1 row-weather-forecast">`;
-    
+      
       forecast.forEach(function (forecastDay, index) {
         if (index > 0 && index < 8) {
           forecastHTML =
-            forecastHTML +
-            `
-            <div class="col-md">
-            <div class="card">
-            <div class="card-body">
-            <h5 class="card-day">${formatDay(forecastDay.dt)}</h5>
-              <p class="card-temperature" id="forecast-max${index}">${Math.round(
+          forecastHTML +
+          `
+          <div class="col-md">
+          <div class="card">
+          <div class="card-body">
+          <h5 class="card-day">${formatDay(forecastDay.dt)}</h5>
+          <strong><p class="card-temperature" id="forecast-temp-max${index}">${Math.round(
               forecastDay.temp.max
-            )}°</p>
-            <img
-            src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
-            alt="${forecastDay.weather[0].description}"
-                class="forecast-icon"
-                />
-              <p class="card-temperature" id="forecast-min${index}">${Math.round(
-              forecastDay.temp.min
-            )}°</p>
-              </div>
-          </div>
+              )}°</p></strong>
+              <img
+              src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+              alt="${forecastDay.weather[0].description}"
+              class="forecast-icon"
+              />
+              <p class="card-temperature" id="forecast-temp-min${index}">${Math.round(
+                forecastDay.temp.min
+                )}°</p>
+                </div>
+                </div>
           </div>
       `}
     });
@@ -154,14 +162,6 @@ function searchCity(city) {
         convertForecastTemperature("imperial");
       }
     }
-    // Forecast for the week - date structure
-    function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  day = date.getDay();
-  days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
-}
     // Forecast temperature to match units
     function convertForecastTemperature(unitType) {
       forecast.forEach(function (forecastDay, index) {

@@ -107,6 +107,42 @@ body {
     list-style: none;
     text-decoration: none;
   }
+  .celsius-description {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.9;
+    display: inline;
+    float: none;
+    text-decoration: none;
+    opacity: 0.97;
+    margin: 0 3px 0 0;
+  }
+  
+  .fahrenheit-description {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1;
+    display: inline;
+    float: none;
+    text-decoration: none;
+    opacity: 0.97;
+    margin: 0 3px 0 0;
+  }
+  
+  .active {
+    color: #3543ff;
+    font-size: 18px;
+    cursor: default;
+
+    
+  }
+  
+  .active:hover {
+    color: #3543ff;
+    text-decoration: none;
+  }
+
+
   #description {
     color: rgb(24, 24, 24);
     display: block;
@@ -175,16 +211,16 @@ body {
     padding: 0%;
   }
   /*5 day forecast */
-  .weather-forecast {
+  .weather-forecast{
     margin-top: 5px;
     text-align: center;
   }
-  .forecast-date {
-    font-size: 18px;
-    color: black;
+  .card-day {
+    font-size: 30px;
+    color: black; 
   }
-  .forecast-temp {
-    font-size: 13px;
+  .card-temperature{
+opacity: 0.6;
   }
   #forecast-temp-min {
     opacity: 0.5;
