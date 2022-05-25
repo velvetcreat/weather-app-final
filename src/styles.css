@@ -129,7 +129,8 @@ body {
     margin: 0 3px 0 0;
   }
   
-  .active {
+  .celsius-description.active,
+.fahrenheit-description.active{
     color: #3543ff;
     font-size: 18px;
     cursor: default;
@@ -137,7 +138,8 @@ body {
     
   }
   
-  .active:hover {
+  .celsius-description:hover,
+.fahrenheit-description.active:hover {
     color: #3543ff;
     text-decoration: none;
   }
@@ -148,46 +150,6 @@ body {
     display: block;
     margin: auto;
     padding-bottom: 15px;
-  }
-  /* Attempted css animation on icons*/
-  #current-icon img:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes shake {
-    0% {
-      transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-      transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-      transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-      transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-      transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-      transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-      transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-      transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-      transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-      transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-      transform: translate(1px, -2px) rotate(-1deg);
-    }
   }
   
   .current-date {
@@ -258,16 +220,5 @@ opacity: 0.6;
     color: #949494;
     text-decoration: none;
     cursor: pointer;
-  }
-  .moon-art {
-    display: block;
-    margin: auto;
-    padding: 0px;
-    position: relative;
-   top: -100px;
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
   }
   
