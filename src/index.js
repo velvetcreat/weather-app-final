@@ -72,9 +72,8 @@ function searchCity(city) {
   let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=`;
   apiUrl = `${apiEndpoint}${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
-
-  // Results from search engine for city weather
 }
+// Results from search engine for city weather
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = `${response.data.name}`;
   document.querySelector("#current-temp").innerHTML = `${Math.round(
@@ -196,7 +195,7 @@ function displayFahreheitTemperature(event) {
   let temperatureElement = document.querySelector("#current-temp");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
-  units = "imperial";
+  units = "metric";
   convertForecastTemperature(units);
 }
 // Fahrenheit to Celsius conversion
