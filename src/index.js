@@ -52,18 +52,16 @@ let currentTime = new Date();
 let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = formatDate(currentTime);
 //
-
-let form = document.querySelector("#search-form");
+let form = document.querySelector("#search-city");
 form.addEventListener("click", handleSubmit);
 
 searchCity("Los Angeles");
-let forecast = null;
 
 //search engine button & box
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
-  let showCurrentCity = document.querySelector("#search-button");
+  let showCurrentCity = document.querySelector("#search-city");
   showCurrentCity.addEventListener("submit", searchCity(city));
 }
 //axios searching... call to API key
@@ -72,8 +70,9 @@ function searchCity(city) {
   let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=`;
   apiUrl = `${apiEndpoint}${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+
+  // Results from search engine for city weather
 }
-// Results from search engine for city weather
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = `${response.data.name}`;
   document.querySelector("#current-temp").innerHTML = `${Math.round(
@@ -217,4 +216,4 @@ let celsiusTemperature = null;
 let celsiusLink = document.querySelector("#cel-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-
+let forecast = null;
