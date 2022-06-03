@@ -62,7 +62,7 @@ let forecast = null;
 //search engine button & box
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+  let city = document.querySelector("#current-city").value;
   let showCurrentCity = document.querySelector("#search-button");
   showCurrentCity.addEventListener("submit", searchCity(city));
 }
