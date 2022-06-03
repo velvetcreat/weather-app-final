@@ -52,7 +52,7 @@ let currentTime = new Date();
 let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = formatDate(currentTime);
 //
-let form = document.querySelector("#search-city");
+let form = document.querySelector("#search-form");
 form.addEventListener("click", handleSubmit);
 
 searchCity("Los Angeles");
