@@ -195,7 +195,7 @@ function displayFahreheitTemperature(event) {
   let temperatureElement = document.querySelector("#current-temp");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
-  units = "metric";
+  units = "imperial";
   convertForecastTemperature(units);
 }
 // Fahrenheit to Celsius conversion
@@ -205,7 +205,7 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-  units = "metric";
+  units = "imperial";
   convertForecastTemperature(units);
 }
 
