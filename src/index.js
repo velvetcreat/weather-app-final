@@ -52,16 +52,18 @@ let currentTime = new Date();
 let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = formatDate(currentTime);
 //
+
 let form = document.querySelector("#search-form");
 form.addEventListener("click", handleSubmit);
 
 searchCity("Los Angeles");
+let forecast = null;
 
 //search engine button & box
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
-  let showCurrentCity = document.querySelector("#search-city");
+  let showCurrentCity = document.querySelector("#search-button");
   showCurrentCity.addEventListener("submit", searchCity(city));
 }
 //axios searching... call to API key
@@ -216,4 +218,4 @@ let celsiusTemperature = null;
 let celsiusLink = document.querySelector("#cel-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-let forecast = null;
+
