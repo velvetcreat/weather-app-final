@@ -205,7 +205,7 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-  units = "imperial";
+  units = "metric";
   convertForecastTemperature(units);
 }
 
